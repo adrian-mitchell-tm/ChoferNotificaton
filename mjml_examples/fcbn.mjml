@@ -1,0 +1,56 @@
+<mjml>
+  <mj-body width="800px">
+
+    <mj-section background-url="https://cdn.cloud.toyota.com/email_templates/imgs/chofer_bg.png" background-size="cover" background-repeat="no-repeat" padding-bottom="0">
+      
+      <mj-column width='95%'>
+        <mj-image src="https://cdn.cloud.toyota.com/email_templates/imgs/chofer_logo.svg" alt="" align="left" width="45px" />
+        <mj-text font-size="20px" font-family="helvetica" color="white">
+          <span style="font-weight: bold;">Chofer</span> Cloud Portal
+        </mj-text>
+        <mj-text padding-bottom="40px" font-size="28px" font-family="helvetica" color="white">
+          Cloud Chargebacks
+        </mj-text>
+      </mj-column>
+      
+      <mj-column background-color="#FFFFFF" width='95%' padding-bottom="0">
+        <mj-text font-size="24px" font-family="helvetica" padding-top="32px" padding-bottom="20px">
+          Greetings from the Cloud Engineering Team
+        </mj-text>
+      </mj-column>
+      
+    </mj-section>
+
+    <mj-section padding-top="0">
+      <mj-column background-color="#FFFFFF" width='95%'>
+        <mj-text font-size="14px" font-family="helvetica">
+          <p>
+            Your {Cloud_Type} Chargebacks for the {Month_Year}. is ready.
+          </p>
+          <p>
+            For further account level distribution of the chargebacks, please check out the <a href="https://chofer.cloud.toyota.com">Chofer Portal</a>.
+          </p>
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding-top="0">
+      <mj-column width="95%">
+        <mj-text font-size="14px" font-family="helvetica" padding-bottom="32px">
+          Best Regards,
+          <p>the Cloud Engineering Team</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f7f7f7">
+      <mj-column padding-right="0">
+        <mj-text font-size="14px" align="center" font-family="helvetica" color="#9b9c9d">
+          Visit Chofer Cloud Portal
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
