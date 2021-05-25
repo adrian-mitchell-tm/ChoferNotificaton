@@ -2,6 +2,7 @@ import json
 
 # Email templates
 from templates.finops.Chargeback import Chargeback
+from templates.finops.ChargebackCredits import ChargebackCredits
 from templates.finops.Optimization import Optimization
 from templates.security.PolicyViolation import PolicyViolation
 from templates.security.AwsWildcard import AwsWildcard
