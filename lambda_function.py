@@ -25,6 +25,9 @@ def lambda_handler(event, context):
         if message["type"] == "FCBN":
             fcbn = Chargeback(message["month"], message["cloud"])
             fcbn.send()
+        elif message["type"] == "FCRN":
+            cbCredits = ChargebackCredits('April 2021', 'AWS')
+            cbCredits.sendAll()
         elif message["type"] == "FORN":
             forn.add(message)
         elif message["type"] == "SPVN":

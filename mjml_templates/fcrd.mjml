@@ -1,0 +1,89 @@
+<mjml>
+  <mj-body width="800px">
+
+    <mj-section background-url="https://cdn.cloud.toyota.com/email_templates/imgs/chofer_bg.png" background-size="cover" background-repeat="no-repeat" padding-bottom="0">
+      
+      <mj-column width='95%'>
+        <mj-image src="https://cdn.cloud.toyota.com/email_templates/imgs/chofer_logo.svg" alt="" align="left" width="45px" />
+        <mj-text font-size="20px" font-family="helvetica" color="white">
+          <span style="font-weight: bold;">Chofer</span> Cloud Portal
+        </mj-text>
+        <mj-text padding-bottom="40px" font-size="28px" font-family="helvetica" color="white">
+          Cloud Chargeback Credit - {Month}
+        </mj-text>
+      </mj-column>
+      
+      <mj-column background-color="#FFFFFF" width='95%' padding-bottom="0">
+        <mj-text font-size="24px" font-family="helvetica" padding-top="32px" padding-bottom="20px">
+         Congrats! Your {Cloud_Type} charges have special savings for {Month_Year}
+        </mj-text>
+      </mj-column>
+      
+    </mj-section>
+
+    <mj-section padding-top="0">
+      <mj-column background-color="#FFFFFF" width='95%'>
+        <mj-text font-size="14px" font-family="helvetica">
+          <p>
+            The Advanced Cloud Engineering (ACE)  team is pleased to inform you of a credit you are getting against your {Cloud_Type} cloud spend for {Month_Year}.
+          </p>
+          <p>Details of your Cloud Account’s April Spend and the Credit you are getting are as follows.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section>
+          <mj-column>
+            <mj-table>
+              <tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+                <th style="padding: 0 15px 0 0;">AccountId</th>
+                <th style="padding: 0 15px 0 0;"> Gross Charge</th>
+                <th>Credit Applied</th>
+                <th>Final Charge</th>
+                <th>% saved</th>
+              </tr>
+              <tr>
+                <td>{Account_Id}</td>
+                <td>{Gross_Charge}</td>
+                <td>{Credit_Applied}</td>
+                <td>{Final_Charge}</td>
+                <td>{Percent_Saved}</td>
+              </tr>
+            </mj-table>
+          </mj-column>
+      
+    </mj-section>
+    
+    <mj-section>
+      <mj-column background-color="#FFFFFF" width='95%'>
+        <mj-text font-size="14px" font-family="helvetica">
+          <p>
+            Please be assured that the ACE team is constantly working with our Cloud Service Providers to get the best discounts and credits for all TMNA Cloud Accounts.
+          </p>
+          <p>
+            For further account level distribution of the chargebacks, please check out the <a href="https://chofer.cloud.toyota.com">Chofer Portal</a>.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding-top="0">
+      <mj-column width="95%">
+        <mj-text font-size="14px" font-family="helvetica" padding-bottom="32px">
+          Best Regards,
+          <p>the Cloud Engineering Team</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f7f7f7">
+      <mj-column padding-right="0">
+        <mj-text font-size="14px" align="center" font-family="helvetica" color="#9b9c9d">
+          Visit Chofer Cloud Portal
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
