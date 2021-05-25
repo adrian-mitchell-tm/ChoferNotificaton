@@ -1,10 +1,11 @@
 import boto3
 from boto3.dynamodb.conditions import Key
+import os
 
 class CamHandler:
     def __init__(self):
         self.dynamodb = boto3.resource('dynamodb')
-        self.dynamo_table = self.dynamodb.Table('ace-prod-cam-data')
+        self.dynamo_table = self.dynamodb.Table(os.environ['DYNAMO_TABLE_NAME'])
 
 
     def get_contacts_by_account_name(self, account_name):

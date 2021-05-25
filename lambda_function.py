@@ -8,7 +8,7 @@ from templates.security.PolicyViolation import PolicyViolation
 from templates.security.AwsWildcard import AwsWildcard
 from templates.security.AzureWildcard import AzureWildcard
 from templates.security.Nuke import Nuke
-
+import os
 
 def lambda_handler(event, context):
     
@@ -26,8 +26,12 @@ def lambda_handler(event, context):
         if message["type"] == "FCBN":
             fcbn = Chargeback(message["month"], message["cloud"])
             fcbn.send()
-        elif message["type"] == "FCRN":
-            cbCredits = ChargebackCredits('April 2021', 'AWS')
+        elif message["type"] == "FCRD":
+            cbCredits = ChargebackCredits(
+                os.environ['CB_MONTH_YEAR'], 
+                os.environ['CB_CREDIT_CLOUD_TYPE'],
+                os.environ['S3_BUCKET_CHARGEBACK_CONTROL'], 
+                os.environ['CREDIT_CSV_FILE'])
             cbCredits.sendAll()
         elif message["type"] == "FORN":
             forn.add(message)

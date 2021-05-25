@@ -3,19 +3,19 @@ import pandas as pd
 from handlers.S3BucketHelper import S3BucketHelper
 from handlers.CamHandler import CamHandler
 
-import re
-
 class ChargebackCredits:
-    def __init__(self, month_year, cloud_type):
+    def __init__(self, month_year, cloud_type, s3_bucket_cb_control, credit_csv_file):
         self.Month_Year = month_year
         self.Cloud_Type = cloud_type
         self.s3helper = S3BucketHelper()
         self.cam = CamHandler()
+        self.s3bucket = s3_bucket_cb_control
+        self.credit_csv_file = credit_csv_file
 
     
     def sendAll(self):
 
-        df = self.s3helper.readCsvFile('ace-prod-aws-chargebacks-control-cea67a10', '202104_AWS_Chargebacks-ForNotifcation.csv')
+        df = self.s3helper.readCsvFile(self.s3bucket, self.credit_csv_file)
 
         for idx, row in df.iterrows():
             acctnum=row['Account#']
